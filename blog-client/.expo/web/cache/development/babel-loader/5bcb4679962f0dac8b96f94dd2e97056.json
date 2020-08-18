@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/home/danielferrari/Projects/Personal/food/src/components/screens/results_show_screen.tsx\";\nimport React from 'react';\nimport View from \"react-native-web/dist/exports/View\";\nimport Text from \"react-native-web/dist/exports/Text\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nvar styles = StyleSheet.create({});\n\nvar ResultsShowScreen = function ResultsShowScreen() {\n  return React.createElement(View, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 8,\n      columnNumber: 5\n    }\n  }, React.createElement(Text, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 9,\n      columnNumber: 7\n    }\n  }, \"Results Show\"));\n};\n\nexport default ResultsShowScreen;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/screens/results_show_screen.tsx"
+    ],
+    "names": ["React", "styles", "StyleSheet", "create", "ResultsShowScreen"],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;;;AAGA,IAAMC,MAAM,GAAGC,UAAU,CAACC,MAAX,CAAkB,EAAlB,CAAf;;AAEA,IAAMC,iBAA2B,GAAG,SAA9BA,iBAA8B,GAAM;AACxC,SACE,oBAAC,IAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,IAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBADF,CADF;AAKD,CAND;;AAQA,eAAeA,iBAAf",
+    "sourcesContent": [
+      "import React from 'react'\nimport { View, Text, StyleSheet } from 'react-native'\n\nconst styles = StyleSheet.create({})\n\nconst ResultsShowScreen: React.FC = () => {\n  return (\n    <View>\n      <Text>Results Show</Text>\n    </View>\n  )\n}\n\nexport default ResultsShowScreen\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

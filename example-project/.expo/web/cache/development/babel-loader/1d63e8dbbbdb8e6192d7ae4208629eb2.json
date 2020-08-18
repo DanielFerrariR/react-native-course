@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "import RNGestureHandlerModule from \"./RNGestureHandlerModule\";\nexport default RNGestureHandlerModule.Direction;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/rn-starter/node_modules/react-native-gesture-handler/Directions.js"
+    ],
+    "names": ["RNGestureHandlerModule", "Direction"],
+    "mappings": "AAAA,OAAOA,sBAAP;AAEA,eAAeA,sBAAsB,CAACC,SAAtC",
+    "sourcesContent": [
+      "import RNGestureHandlerModule from './RNGestureHandlerModule';\n\nexport default RNGestureHandlerModule.Direction;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

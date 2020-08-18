@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://8n-hmc.danielferrari.blog-client.exp.direct",
+  "packagerNgrokUrl": "https://packager.8n-hmc.danielferrari.blog-client.exp.direct",
+  "ngrokPid": 10433,
+  "webpackServerPort": null
+}

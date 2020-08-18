@@ -1,0 +1,36 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/home/danielferrari/Projects/Personal/food/src/components/molecules/results_list.tsx\";\nimport React from 'react';\nimport View from \"react-native-web/dist/exports/View\";\nimport Text from \"react-native-web/dist/exports/Text\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport FlatList from \"react-native-web/dist/exports/FlatList\";\nimport TouchableOpacity from \"react-native-web/dist/exports/TouchableOpacity\";\nimport { useNavigation } from '@react-navigation/native';\nimport ResultsDetail from \"./result_detail\";\nvar styles = StyleSheet.create({\n  title: {\n    fontSize: 18,\n    fontWeight: 'bold',\n    marginLeft: 16,\n    marginBottom: 4\n  },\n  container: {\n    marginBottom: 8\n  }\n});\n\nvar ResultsList = function ResultsList(_ref) {\n  var title = _ref.title,\n      results = _ref.results;\n  var navigation = useNavigation();\n  return React.createElement(View, {\n    style: styles.container,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 34,\n      columnNumber: 5\n    }\n  }, React.createElement(Text, {\n    style: styles.title,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 35,\n      columnNumber: 7\n    }\n  }, title), React.createElement(FlatList, {\n    horizontal: true,\n    showsHorizontalScrollIndicator: false,\n    data: results,\n    keyExtractor: function keyExtractor(item) {\n      return item.id;\n    },\n    renderItem: function renderItem(_ref2) {\n      var item = _ref2.item;\n      return React.createElement(TouchableOpacity, {\n        onPress: function onPress() {\n          return navigation.navigate('ResultsShow');\n        },\n        __source: {\n          fileName: _jsxFileName,\n          lineNumber: 42,\n          columnNumber: 11\n        }\n      }, React.createElement(ResultsDetail, {\n        result: item,\n        __source: {\n          fileName: _jsxFileName,\n          lineNumber: 43,\n          columnNumber: 13\n        }\n      }));\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 36,\n      columnNumber: 7\n    }\n  }));\n};\n\nexport default ResultsList;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/molecules/results_list.tsx"
+    ],
+    "names": [
+      "React",
+      "useNavigation",
+      "ResultsDetail",
+      "styles",
+      "StyleSheet",
+      "create",
+      "title",
+      "fontSize",
+      "fontWeight",
+      "marginLeft",
+      "marginBottom",
+      "container",
+      "ResultsList",
+      "results",
+      "navigation",
+      "item",
+      "id",
+      "navigate"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;;;;;AAQA,SAASC,aAAT,QAA8B,0BAA9B;AAEA,OAAOC,aAAP;AAEA,IAAMC,MAAM,GAAGC,UAAU,CAACC,MAAX,CAAkB;AAC/BC,EAAAA,KAAK,EAAE;AACLC,IAAAA,QAAQ,EAAE,EADL;AAELC,IAAAA,UAAU,EAAE,MAFP;AAGLC,IAAAA,UAAU,EAAE,EAHP;AAILC,IAAAA,YAAY,EAAE;AAJT,GADwB;AAO/BC,EAAAA,SAAS,EAAE;AACTD,IAAAA,YAAY,EAAE;AADL;AAPoB,CAAlB,CAAf;;AAiBA,IAAME,WAA4B,GAAG,SAA/BA,WAA+B,OAAwB;AAAA,MAArBN,KAAqB,QAArBA,KAAqB;AAAA,MAAdO,OAAc,QAAdA,OAAc;AAC3D,MAAMC,UAAU,GAAGb,aAAa,EAAhC;AAEA,SACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEE,MAAM,CAACQ,SAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAER,MAAM,CAACG,KAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KAA4BA,KAA5B,CADF,EAEE,oBAAC,QAAD;AACE,IAAA,UAAU,MADZ;AAEE,IAAA,8BAA8B,EAAE,KAFlC;AAGE,IAAA,IAAI,EAAEO,OAHR;AAIE,IAAA,YAAY,EAAE,sBAACE,IAAD;AAAA,aAAUA,IAAI,CAACC,EAAf;AAAA,KAJhB;AAKE,IAAA,UAAU,EAAE;AAAA,UAAGD,IAAH,SAAGA,IAAH;AAAA,aACV,oBAAC,gBAAD;AAAkB,QAAA,OAAO,EAAE;AAAA,iBAAMD,UAAU,CAACG,QAAX,CAAoB,aAApB,CAAN;AAAA,SAA3B;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SACE,oBAAC,aAAD;AAAe,QAAA,MAAM,EAAEF,IAAvB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,QADF,CADU;AAAA,KALd;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAFF,CADF;AAgBD,CAnBD;;AAqBA,eAAeH,WAAf",
+    "sourcesContent": [
+      "import React from 'react'\nimport {\n  View,\n  Text,\n  StyleSheet,\n  FlatList,\n  TouchableOpacity\n} from 'react-native'\nimport { useNavigation } from '@react-navigation/native'\nimport { AxiosSearchResponse } from '../../hooks'\nimport ResultsDetail from './result_detail'\n\nconst styles = StyleSheet.create({\n  title: {\n    fontSize: 18,\n    fontWeight: 'bold',\n    marginLeft: 16,\n    marginBottom: 4\n  },\n  container: {\n    marginBottom: 8\n  }\n})\n\ninterface Props {\n  title: string\n  results: AxiosSearchResponse['businesses'] | []\n}\n\nconst ResultsList: React.FC<Props> = ({ title, results }) => {\n  const navigation = useNavigation()\n\n  return (\n    <View style={styles.container}>\n      <Text style={styles.title}>{title}</Text>\n      <FlatList\n        horizontal\n        showsHorizontalScrollIndicator={false}\n        data={results}\n        keyExtractor={(item) => item.id}\n        renderItem={({ item }) => (\n          <TouchableOpacity onPress={() => navigation.navigate('ResultsShow')}>\n            <ResultsDetail result={item} />\n          </TouchableOpacity>\n        )}\n      />\n    </View>\n  )\n}\n\nexport default ResultsList\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

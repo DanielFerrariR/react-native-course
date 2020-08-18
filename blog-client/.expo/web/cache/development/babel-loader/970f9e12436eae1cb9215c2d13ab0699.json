@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export { default as SearchBar } from \"./search_bar\";",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/atoms/index.ts"
+    ],
+    "names": ["default", "SearchBar"],
+    "mappings": "AACA,SAASA,OAAO,IAAIC,SAApB",
+    "sourcesContent": [
+      "// eslint-disable-next-line import/prefer-default-export\nexport { default as SearchBar } from './search_bar'\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

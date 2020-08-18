@@ -1,0 +1,26 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/home/danielferrari/Projects/Personal/food/src/routes/index.tsx\";\nimport React from 'react';\nimport { createStackNavigator } from '@react-navigation/stack';\nimport { SearchScreen, ResultsShowScreen } from \"../components/screens\";\nvar Stack = createStackNavigator();\n\nvar Routes = function Routes() {\n  return React.createElement(Stack.Navigator, {\n    initialRouteName: \"Search\",\n    screenOptions: {\n      gestureEnabled: false\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 10,\n      columnNumber: 5\n    }\n  }, React.createElement(Stack.Screen, {\n    name: \"Search\",\n    component: SearchScreen,\n    options: {\n      title: 'Business Search'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 14,\n      columnNumber: 7\n    }\n  }), React.createElement(Stack.Screen, {\n    name: \"ResultsShow\",\n    component: ResultsShowScreen,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 19,\n      columnNumber: 7\n    }\n  }));\n};\n\nexport default Routes;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/routes/index.tsx"
+    ],
+    "names": [
+      "React",
+      "createStackNavigator",
+      "SearchScreen",
+      "ResultsShowScreen",
+      "Stack",
+      "Routes",
+      "gestureEnabled",
+      "title"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,SAASC,oBAAT,QAAqC,yBAArC;AACA,SAASC,YAAT,EAAuBC,iBAAvB;AAEA,IAAMC,KAAK,GAAGH,oBAAoB,EAAlC;;AAEA,IAAMI,MAAgB,GAAG,SAAnBA,MAAmB,GAAM;AAC7B,SACE,oBAAC,KAAD,CAAO,SAAP;AACE,IAAA,gBAAgB,EAAC,QADnB;AAEE,IAAA,aAAa,EAAE;AAAEC,MAAAA,cAAc,EAAE;AAAlB,KAFjB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KAIE,oBAAC,KAAD,CAAO,MAAP;AACE,IAAA,IAAI,EAAC,QADP;AAEE,IAAA,SAAS,EAAEJ,YAFb;AAGE,IAAA,OAAO,EAAE;AAAEK,MAAAA,KAAK,EAAE;AAAT,KAHX;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAJF,EASE,oBAAC,KAAD,CAAO,MAAP;AAAc,IAAA,IAAI,EAAC,aAAnB;AAAiC,IAAA,SAAS,EAAEJ,iBAA5C;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IATF,CADF;AAaD,CAdD;;AAgBA,eAAeE,MAAf",
+    "sourcesContent": [
+      "import React from 'react'\nimport { NavigationContainer } from '@react-navigation/native'\nimport { createStackNavigator } from '@react-navigation/stack'\nimport { SearchScreen, ResultsShowScreen } from '../components/screens'\n\nconst Stack = createStackNavigator()\n\nconst Routes: React.FC = () => {\n  return (\n    <Stack.Navigator\n      initialRouteName=\"Search\"\n      screenOptions={{ gestureEnabled: false }}\n    >\n      <Stack.Screen\n        name=\"Search\"\n        component={SearchScreen}\n        options={{ title: 'Business Search' }}\n      />\n      <Stack.Screen name=\"ResultsShow\" component={ResultsShowScreen} />\n    </Stack.Navigator>\n  )\n}\n\nexport default Routes\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

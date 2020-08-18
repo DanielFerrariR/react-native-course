@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export { default as api } from \"./api\";",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/utils/index.ts"
+    ],
+    "names": ["default", "api"],
+    "mappings": "AACA,SAASA,OAAO,IAAIC,GAApB",
+    "sourcesContent": [
+      "// eslint-disable-next-line import/prefer-default-export\nexport { default as api } from './api'\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

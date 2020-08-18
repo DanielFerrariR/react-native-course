@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export { default as ResultsList } from \"./results_list\";",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/molecules/index.ts"
+    ],
+    "names": ["default", "ResultsList"],
+    "mappings": "AACA,SAASA,OAAO,IAAIC,WAApB",
+    "sourcesContent": [
+      "// eslint-disable-next-line import/prefer-default-export\nexport { default as ResultsList } from './results_list'\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

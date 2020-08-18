@@ -1,0 +1,37 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/home/danielferrari/Projects/Personal/food/src/components/molecules/result_detail.tsx\";\nimport React from 'react';\nimport View from \"react-native-web/dist/exports/View\";\nimport Image from \"react-native-web/dist/exports/Image\";\nimport Text from \"react-native-web/dist/exports/Text\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nvar styles = StyleSheet.create({\n  image: {\n    borderRadius: 4,\n    width: 240,\n    height: 120,\n    marginBottom: 4\n  },\n  name: {\n    fontWeight: 'bold'\n  },\n  container: {\n    marginLeft: 16\n  }\n});\n\nvar ResultsDetail = function ResultsDetail(_ref) {\n  var result = _ref.result;\n  return React.createElement(View, {\n    style: styles.container,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 26,\n      columnNumber: 5\n    }\n  }, React.createElement(Image, {\n    style: styles.image,\n    source: {\n      uri: result.image_url\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 27,\n      columnNumber: 7\n    }\n  }), React.createElement(Text, {\n    style: styles.name,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 28,\n      columnNumber: 7\n    }\n  }, result.name), React.createElement(Text, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 29,\n      columnNumber: 7\n    }\n  }, result.rating, \" Stars, \", result.review_count, \" Reviews\"));\n};\n\nexport default ResultsDetail;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/molecules/result_detail.tsx"
+    ],
+    "names": [
+      "React",
+      "styles",
+      "StyleSheet",
+      "create",
+      "image",
+      "borderRadius",
+      "width",
+      "height",
+      "marginBottom",
+      "name",
+      "fontWeight",
+      "container",
+      "marginLeft",
+      "ResultsDetail",
+      "result",
+      "uri",
+      "image_url",
+      "rating",
+      "review_count"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;;;;AAIA,IAAMC,MAAM,GAAGC,UAAU,CAACC,MAAX,CAAkB;AAC/BC,EAAAA,KAAK,EAAE;AACLC,IAAAA,YAAY,EAAE,CADT;AAELC,IAAAA,KAAK,EAAE,GAFF;AAGLC,IAAAA,MAAM,EAAE,GAHH;AAILC,IAAAA,YAAY,EAAE;AAJT,GADwB;AAO/BC,EAAAA,IAAI,EAAE;AACJC,IAAAA,UAAU,EAAE;AADR,GAPyB;AAU/BC,EAAAA,SAAS,EAAE;AACTC,IAAAA,UAAU,EAAE;AADH;AAVoB,CAAlB,CAAf;;AAmBA,IAAMC,aAA8B,GAAG,SAAjCA,aAAiC,OAAgB;AAAA,MAAbC,MAAa,QAAbA,MAAa;AACrD,SACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEb,MAAM,CAACU,SAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,KAAD;AAAO,IAAA,KAAK,EAAEV,MAAM,CAACG,KAArB;AAA4B,IAAA,MAAM,EAAE;AAAEW,MAAAA,GAAG,EAAED,MAAM,CAACE;AAAd,KAApC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEf,MAAM,CAACQ,IAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KAA2BK,MAAM,CAACL,IAAlC,CAFF,EAGE,oBAAC,IAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACGK,MAAM,CAACG,MADV,cAC0BH,MAAM,CAACI,YADjC,aAHF,CADF;AASD,CAVD;;AAYA,eAAeL,aAAf",
+    "sourcesContent": [
+      "import React from 'react'\nimport { View, Image, Text, StyleSheet } from 'react-native'\nimport { AxiosSearchResponse } from '../../hooks'\n\nconst styles = StyleSheet.create({\n  image: {\n    borderRadius: 4,\n    width: 240,\n    height: 120,\n    marginBottom: 4\n  },\n  name: {\n    fontWeight: 'bold'\n  },\n  container: {\n    marginLeft: 16\n  }\n})\n\ninterface Props {\n  result: AxiosSearchResponse['businesses'][0]\n}\n\nconst ResultsDetail: React.FC<Props> = ({ result }) => {\n  return (\n    <View style={styles.container}>\n      <Image style={styles.image} source={{ uri: result.image_url }} />\n      <Text style={styles.name}>{result.name}</Text>\n      <Text>\n        {result.rating} Stars, {result.review_count} Reviews\n      </Text>\n    </View>\n  )\n}\n\nexport default ResultsDetail\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

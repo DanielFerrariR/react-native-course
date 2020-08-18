@@ -1,0 +1,15 @@
+{
+  "ast": null,
+  "code": "import axios from 'axios';\nvar api = axios.create({\n  baseURL: 'https://api.yelp.com/v3/businesses',\n  headers: {\n    Authorization: 'Bearer m-FhMnrLgudqWbyL5EDBS5-J-UX7-Lci4YQ2wlWXL9geIB-bvz4i_MSwfLzBjiPebJ5g7kID7Ag8EhVFonz8MbX6REJR1Lux1krNpep2W8w_hPAmiQD5uCy4fTcqX3Yx'\n  }\n});\nexport default api;",
+  "map": {
+    "version": 3,
+    "sources": ["/home/danielferrari/Projects/Personal/food/src/utils/api.ts"],
+    "names": ["axios", "api", "create", "baseURL", "headers", "Authorization"],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,IAAMC,GAAG,GAAGD,KAAK,CAACE,MAAN,CAAa;AACvBC,EAAAA,OAAO,EAAE,oCADc;AAEvBC,EAAAA,OAAO,EAAE;AACPC,IAAAA,aAAa,EACX;AAFK;AAFc,CAAb,CAAZ;AAQA,eAAeJ,GAAf",
+    "sourcesContent": [
+      "import axios from 'axios'\n\nconst api = axios.create({\n  baseURL: 'https://api.yelp.com/v3/businesses',\n  headers: {\n    Authorization:\n      'Bearer m-FhMnrLgudqWbyL5EDBS5-J-UX7-Lci4YQ2wlWXL9geIB-bvz4i_MSwfLzBjiPebJ5g7kID7Ag8EhVFonz8MbX6REJR1Lux1krNpep2W8w_hPAmiQD5uCy4fTcqX3Yx'\n  }\n})\n\nexport default api\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

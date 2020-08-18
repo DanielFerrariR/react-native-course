@@ -1,0 +1,6 @@
+export { default as CreateTrack } from './create_track'
+export { default as Login} from './login'
+export { default as Register} from './register'
+export { default as Settings} from './settings'
+export { default as TrackDetail } from './track_detail'
+export { default as TrackList } from './track_list'

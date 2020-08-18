@@ -1,0 +1,33 @@
+{
+  "ast": null,
+  "code": "import _slicedToArray from \"@babel/runtime/helpers/slicedToArray\";\nvar _jsxFileName = \"/home/danielferrari/Projects/Personal/food/src/components/screens/search_screen.tsx\";\nimport React, { useState } from 'react';\nimport Text from \"react-native-web/dist/exports/Text\";\nimport ScrollView from \"react-native-web/dist/exports/ScrollView\";\nimport { SearchBar } from \"../atoms\";\nimport { useResults } from \"../../hooks\";\nimport { ResultsList } from \"../molecules\";\n\nvar SearchScreen = function SearchScreen() {\n  var _useState = useState(''),\n      _useState2 = _slicedToArray(_useState, 2),\n      term = _useState2[0],\n      setTerm = _useState2[1];\n\n  var _useResults = useResults(),\n      _useResults2 = _slicedToArray(_useResults, 3),\n      searchApi = _useResults2[0],\n      results = _useResults2[1],\n      errorMessage = _useResults2[2];\n\n  var filterResultsByPrice = function filterResultsByPrice(price) {\n    return results.filter(function (result) {\n      return result.price === price;\n    });\n  };\n\n  return React.createElement(React.Fragment, null, React.createElement(SearchBar, {\n    term: term,\n    setTerm: setTerm,\n    onTermSubmitted: function onTermSubmitted() {\n      return searchApi(term);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 19,\n      columnNumber: 7\n    }\n  }), errorMessage ? React.createElement(Text, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 24,\n      columnNumber: 23\n    }\n  }, errorMessage) : null, React.createElement(ScrollView, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 25,\n      columnNumber: 7\n    }\n  }, React.createElement(ResultsList, {\n    title: \"Cost Effective\",\n    results: filterResultsByPrice('$'),\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 26,\n      columnNumber: 9\n    }\n  }), React.createElement(ResultsList, {\n    title: \"Bit Pricier\",\n    results: filterResultsByPrice('$$'),\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 30,\n      columnNumber: 9\n    }\n  }), React.createElement(ResultsList, {\n    title: \"Big Spender\",\n    results: filterResultsByPrice('$'),\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 31,\n      columnNumber: 9\n    }\n  })));\n};\n\nexport default SearchScreen;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/screens/search_screen.tsx"
+    ],
+    "names": [
+      "React",
+      "useState",
+      "SearchBar",
+      "useResults",
+      "ResultsList",
+      "SearchScreen",
+      "term",
+      "setTerm",
+      "searchApi",
+      "results",
+      "errorMessage",
+      "filterResultsByPrice",
+      "price",
+      "filter",
+      "result"
+    ],
+    "mappings": ";;AAAA,OAAOA,KAAP,IAAgBC,QAAhB,QAAgC,OAAhC;;;AAEA,SAASC,SAAT;AACA,SAASC,UAAT;AACA,SAASC,WAAT;;AAEA,IAAMC,YAAsB,GAAG,SAAzBA,YAAyB,GAAM;AAAA,kBACXJ,QAAQ,CAAC,EAAD,CADG;AAAA;AAAA,MAC5BK,IAD4B;AAAA,MACtBC,OADsB;;AAAA,oBAEQJ,UAAU,EAFlB;AAAA;AAAA,MAE5BK,SAF4B;AAAA,MAEjBC,OAFiB;AAAA,MAERC,YAFQ;;AAInC,MAAMC,oBAAoB,GAAG,SAAvBA,oBAAuB,CAACC,KAAD,EAAmB;AAC9C,WAAOH,OAAO,CAACI,MAAR,CAAe,UAACC,MAAD,EAAY;AAChC,aAAOA,MAAM,CAACF,KAAP,KAAiBA,KAAxB;AACD,KAFM,CAAP;AAGD,GAJD;;AAMA,SACE,0CACE,oBAAC,SAAD;AACE,IAAA,IAAI,EAAEN,IADR;AAEE,IAAA,OAAO,EAAEC,OAFX;AAGE,IAAA,eAAe,EAAE;AAAA,aAAMC,SAAS,CAACF,IAAD,CAAf;AAAA,KAHnB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAMGI,YAAY,GAAG,oBAAC,IAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KAAOA,YAAP,CAAH,GAAiC,IANhD,EAOE,oBAAC,UAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,WAAD;AACE,IAAA,KAAK,EAAC,gBADR;AAEE,IAAA,OAAO,EAAEC,oBAAoB,CAAC,GAAD,CAF/B;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAKE,oBAAC,WAAD;AAAa,IAAA,KAAK,EAAC,aAAnB;AAAiC,IAAA,OAAO,EAAEA,oBAAoB,CAAC,IAAD,CAA9D;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IALF,EAME,oBAAC,WAAD;AAAa,IAAA,KAAK,EAAC,aAAnB;AAAiC,IAAA,OAAO,EAAEA,oBAAoB,CAAC,GAAD,CAA9D;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IANF,CAPF,CADF;AAkBD,CA5BD;;AA8BA,eAAeN,YAAf",
+    "sourcesContent": [
+      "import React, { useState } from 'react'\nimport { Text, ScrollView } from 'react-native'\nimport { SearchBar } from '../atoms'\nimport { useResults } from '../../hooks'\nimport { ResultsList } from '../molecules'\n\nconst SearchScreen: React.FC = () => {\n  const [term, setTerm] = useState('')\n  const [searchApi, results, errorMessage] = useResults()\n\n  const filterResultsByPrice = (price: string) => {\n    return results.filter((result) => {\n      return result.price === price\n    })\n  }\n\n  return (\n    <>\n      <SearchBar\n        term={term}\n        setTerm={setTerm}\n        onTermSubmitted={() => searchApi(term)}\n      />\n      {errorMessage ? <Text>{errorMessage}</Text> : null}\n      <ScrollView>\n        <ResultsList\n          title=\"Cost Effective\"\n          results={filterResultsByPrice('$')}\n        />\n        <ResultsList title=\"Bit Pricier\" results={filterResultsByPrice('$$')} />\n        <ResultsList title=\"Big Spender\" results={filterResultsByPrice('$')} />\n      </ScrollView>\n    </>\n  )\n}\n\nexport default SearchScreen\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

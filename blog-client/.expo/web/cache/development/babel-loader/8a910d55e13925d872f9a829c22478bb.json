@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export { default as useResults } from \"./use_results\";\nexport * from \"./use_results\";",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/hooks/index.ts"
+    ],
+    "names": ["default", "useResults"],
+    "mappings": "AAAA,SAASA,OAAO,IAAIC,UAApB;AACA",
+    "sourcesContent": [
+      "export { default as useResults } from './use_results'\nexport * from './use_results'\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

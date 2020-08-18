@@ -1,0 +1,41 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/home/danielferrari/Projects/Personal/food/src/components/atoms/search_bar.tsx\";\nimport React from 'react';\nimport View from \"react-native-web/dist/exports/View\";\nimport TextInput from \"react-native-web/dist/exports/TextInput\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport { Feather } from '@expo/vector-icons';\nvar styles = StyleSheet.create({\n  backgroundStyle: {\n    marginTop: 16,\n    backgroundColor: '#F0EEEE',\n    height: 48,\n    borderRadius: 4,\n    marginHorizontal: 16,\n    flexDirection: 'row',\n    marginBottom: 8\n  },\n  inputStyle: {\n    flex: 1,\n    fontSize: 16\n  },\n  iconStyle: {\n    fontSize: 24,\n    alignSelf: 'center',\n    marginHorizontal: 12\n  }\n});\n\nvar SearchBar = function SearchBar(_ref) {\n  var term = _ref.term,\n      setTerm = _ref.setTerm,\n      onTermSubmitted = _ref.onTermSubmitted;\n  return React.createElement(View, {\n    style: styles.backgroundStyle,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 34,\n      columnNumber: 5\n    }\n  }, React.createElement(Feather, {\n    name: \"search\",\n    style: styles.iconStyle,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 35,\n      columnNumber: 7\n    }\n  }), React.createElement(TextInput, {\n    autoCapitalize: \"none\",\n    autoCorrect: false,\n    style: styles.inputStyle,\n    placeholder: \"Search\",\n    value: term,\n    onChangeText: function onChangeText(newTerm) {\n      return setTerm(newTerm);\n    },\n    onEndEditing: onTermSubmitted,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 36,\n      columnNumber: 7\n    }\n  }));\n};\n\nexport default SearchBar;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/atoms/search_bar.tsx"
+    ],
+    "names": [
+      "React",
+      "Feather",
+      "styles",
+      "StyleSheet",
+      "create",
+      "backgroundStyle",
+      "marginTop",
+      "backgroundColor",
+      "height",
+      "borderRadius",
+      "marginHorizontal",
+      "flexDirection",
+      "marginBottom",
+      "inputStyle",
+      "flex",
+      "fontSize",
+      "iconStyle",
+      "alignSelf",
+      "SearchBar",
+      "term",
+      "setTerm",
+      "onTermSubmitted",
+      "newTerm"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAgD,OAAhD;;;;AAEA,SAASC,OAAT,QAAwB,oBAAxB;AAEA,IAAMC,MAAM,GAAGC,UAAU,CAACC,MAAX,CAAkB;AAC/BC,EAAAA,eAAe,EAAE;AACfC,IAAAA,SAAS,EAAE,EADI;AAEfC,IAAAA,eAAe,EAAE,SAFF;AAGfC,IAAAA,MAAM,EAAE,EAHO;AAIfC,IAAAA,YAAY,EAAE,CAJC;AAKfC,IAAAA,gBAAgB,EAAE,EALH;AAMfC,IAAAA,aAAa,EAAE,KANA;AAOfC,IAAAA,YAAY,EAAE;AAPC,GADc;AAU/BC,EAAAA,UAAU,EAAE;AACVC,IAAAA,IAAI,EAAE,CADI;AAEVC,IAAAA,QAAQ,EAAE;AAFA,GAVmB;AAc/BC,EAAAA,SAAS,EAAE;AACTD,IAAAA,QAAQ,EAAE,EADD;AAETE,IAAAA,SAAS,EAAE,QAFF;AAGTP,IAAAA,gBAAgB,EAAE;AAHT;AAdoB,CAAlB,CAAf;;AA2BA,IAAMQ,SAA0B,GAAG,SAA7BA,SAA6B,OAAwC;AAAA,MAArCC,IAAqC,QAArCA,IAAqC;AAAA,MAA/BC,OAA+B,QAA/BA,OAA+B;AAAA,MAAtBC,eAAsB,QAAtBA,eAAsB;AACzE,SACE,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEnB,MAAM,CAACG,eAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE,oBAAC,OAAD;AAAS,IAAA,IAAI,EAAC,QAAd;AAAuB,IAAA,KAAK,EAAEH,MAAM,CAACc,SAArC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEE,oBAAC,SAAD;AACE,IAAA,cAAc,EAAC,MADjB;AAEE,IAAA,WAAW,EAAE,KAFf;AAGE,IAAA,KAAK,EAAEd,MAAM,CAACW,UAHhB;AAIE,IAAA,WAAW,EAAC,QAJd;AAKE,IAAA,KAAK,EAAEM,IALT;AAME,IAAA,YAAY,EAAE,sBAACG,OAAD;AAAA,aAAaF,OAAO,CAACE,OAAD,CAApB;AAAA,KANhB;AAOE,IAAA,YAAY,EAAED,eAPhB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAFF,CADF;AAcD,CAfD;;AAiBA,eAAeH,SAAf",
+    "sourcesContent": [
+      "import React, { Dispatch, SetStateAction } from 'react'\nimport { View, TextInput, StyleSheet } from 'react-native'\nimport { Feather } from '@expo/vector-icons'\n\nconst styles = StyleSheet.create({\n  backgroundStyle: {\n    marginTop: 16,\n    backgroundColor: '#F0EEEE',\n    height: 48,\n    borderRadius: 4,\n    marginHorizontal: 16,\n    flexDirection: 'row',\n    marginBottom: 8\n  },\n  inputStyle: {\n    flex: 1,\n    fontSize: 16\n  },\n  iconStyle: {\n    fontSize: 24,\n    alignSelf: 'center',\n    marginHorizontal: 12\n  }\n})\n\ninterface Props {\n  term: string\n  setTerm: Dispatch<SetStateAction<string>>\n  onTermSubmitted: () => void\n}\n\nconst SearchBar: React.FC<Props> = ({ term, setTerm, onTermSubmitted }) => {\n  return (\n    <View style={styles.backgroundStyle}>\n      <Feather name=\"search\" style={styles.iconStyle} />\n      <TextInput\n        autoCapitalize=\"none\"\n        autoCorrect={false}\n        style={styles.inputStyle}\n        placeholder=\"Search\"\n        value={term}\n        onChangeText={(newTerm) => setTerm(newTerm)}\n        onEndEditing={onTermSubmitted}\n      />\n    </View>\n  )\n}\n\nexport default SearchBar\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

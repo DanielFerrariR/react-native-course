@@ -1,0 +1,38 @@
+{
+  "ast": null,
+  "code": "import _regeneratorRuntime from \"@babel/runtime/regenerator\";\nimport _slicedToArray from \"@babel/runtime/helpers/slicedToArray\";\nimport { useState, useEffect } from 'react';\nimport { api } from \"../utils\";\n\nvar useResults = function useResults() {\n  var _useState = useState([]),\n      _useState2 = _slicedToArray(_useState, 2),\n      results = _useState2[0],\n      setResults = _useState2[1];\n\n  var _useState3 = useState(''),\n      _useState4 = _slicedToArray(_useState3, 2),\n      errorMessage = _useState4[0],\n      setErrorMessage = _useState4[1];\n\n  var searchApi = function searchApi(searchTerm) {\n    var response;\n    return _regeneratorRuntime.async(function searchApi$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 3;\n            return _regeneratorRuntime.awrap(api.get('/search', {\n              params: {\n                limit: 50,\n                term: searchTerm,\n                location: 'san jose'\n              }\n            }));\n\n          case 3:\n            response = _context.sent;\n            setResults(response.data.businesses);\n            _context.next = 11;\n            break;\n\n          case 7:\n            _context.prev = 7;\n            _context.t0 = _context[\"catch\"](0);\n            console.log(_context.t0);\n            setErrorMessage('Something went wrong.');\n\n          case 11:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, null, null, [[0, 7]], Promise);\n  };\n\n  useEffect(function () {\n    searchApi('pasta');\n  }, []);\n  return [searchApi, results, errorMessage];\n};\n\nexport default useResults;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/hooks/use_results.ts"
+    ],
+    "names": [
+      "useState",
+      "useEffect",
+      "api",
+      "useResults",
+      "results",
+      "setResults",
+      "errorMessage",
+      "setErrorMessage",
+      "searchApi",
+      "searchTerm",
+      "get",
+      "params",
+      "limit",
+      "term",
+      "location",
+      "response",
+      "data",
+      "businesses",
+      "console",
+      "log"
+    ],
+    "mappings": ";;AAAA,SAASA,QAAT,EAAmBC,SAAnB,QAAoC,OAApC;AACA,SAASC,GAAT;;AAwCA,IAAMC,UAAU,GAAG,SAAbA,UAAa,GAId;AAAA,kBAC2BH,QAAQ,CAEpC,EAFoC,CADnC;AAAA;AAAA,MACII,OADJ;AAAA,MACaC,UADb;;AAAA,mBAIqCL,QAAQ,CAAC,EAAD,CAJ7C;AAAA;AAAA,MAIIM,YAJJ;AAAA,MAIkBC,eAJlB;;AAMH,MAAMC,SAAS,GAAG,SAAZA,SAAY,CAAOC,UAAP;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,6CAESP,GAAG,CAACQ,GAAJ,CAA6B,SAA7B,EAAwC;AAC7DC,cAAAA,MAAM,EAAE;AACNC,gBAAAA,KAAK,EAAE,EADD;AAENC,gBAAAA,IAAI,EAAEJ,UAFA;AAGNK,gBAAAA,QAAQ,EAAE;AAHJ;AADqD,aAAxC,CAFT;;AAAA;AAERC,YAAAA,QAFQ;AAUdV,YAAAA,UAAU,CAACU,QAAQ,CAACC,IAAT,CAAcC,UAAf,CAAV;AAVc;AAAA;;AAAA;AAAA;AAAA;AAYdC,YAAAA,OAAO,CAACC,GAAR;AACAZ,YAAAA,eAAe,CAAC,uBAAD,CAAf;;AAbc;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAlB;;AAiBAN,EAAAA,SAAS,CAAC,YAAM;AACdO,IAAAA,SAAS,CAAC,OAAD,CAAT;AACD,GAFQ,EAEN,EAFM,CAAT;AAIA,SAAO,CAACA,SAAD,EAAYJ,OAAZ,EAAqBE,YAArB,CAAP;AACD,CAhCD;;AAkCA,eAAeH,UAAf",
+    "sourcesContent": [
+      "import { useState, useEffect } from 'react'\nimport { api } from '../utils'\n\nexport interface AxiosSearchResponse {\n  total: number\n  businesses: {\n    rating: number\n    price: string\n    phone: string\n    id: string\n    alias: string\n    is_closed: boolean\n    categories: { alias: string; title: string }[]\n    review_count: number\n    name: string\n    url: string\n    coordinates: {\n      latitude: number\n      longitude: number\n    }\n    image_url: string\n    location: {\n      city: string\n      country: string\n      address2: string\n      address3: string\n      state: string\n      address1: string\n      zip_code: string\n    }\n    distance: number\n    transactions: string[]\n  }[]\n  region: {\n    center: {\n      latitude: number\n      longitude: number\n    }\n  }\n}\n\nconst useResults = (): [\n  typeof searchApi,\n  typeof results,\n  typeof errorMessage\n] => {\n  const [results, setResults] = useState<\n    AxiosSearchResponse['businesses'] | []\n  >([])\n  const [errorMessage, setErrorMessage] = useState('')\n\n  const searchApi = async (searchTerm: string) => {\n    try {\n      const response = await api.get<AxiosSearchResponse>('/search', {\n        params: {\n          limit: 50,\n          term: searchTerm,\n          location: 'san jose'\n        }\n      })\n\n      setResults(response.data.businesses)\n    } catch (error) {\n      console.log(error)\n      setErrorMessage('Something went wrong.')\n    }\n  }\n\n  useEffect(() => {\n    searchApi('pasta')\n  }, [])\n\n  return [searchApi, results, errorMessage]\n}\n\nexport default useResults\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

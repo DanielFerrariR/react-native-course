@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export { default as SearchScreen } from \"./search_screen\";\nexport { default as ResultsShowScreen } from \"./results_show_screen\";",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/home/danielferrari/Projects/Personal/food/src/components/screens/index.ts"
+    ],
+    "names": ["default", "SearchScreen", "ResultsShowScreen"],
+    "mappings": "AAAA,SAASA,OAAO,IAAIC,YAApB;AACA,SAASD,OAAO,IAAIE,iBAApB",
+    "sourcesContent": [
+      "export { default as SearchScreen } from './search_screen'\nexport { default as ResultsShowScreen } from './results_show_screen'\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
