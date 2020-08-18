@@ -41,7 +41,7 @@ const Routes: React.FC = () => {
 
           dispatch(setLoggedUser(newUserData))
         } else {
-          dispatch(setNotLoggedUser(false))
+          dispatch(setNotLoggedUser())
         }
       } catch (error) {
         console.log(error)

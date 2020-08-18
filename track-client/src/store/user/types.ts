@@ -37,7 +37,7 @@ export interface SetLoggedUserAction {
 
 export interface SetNotLoggedUserAction {
   type: typeof SET_NOT_LOGGED_USER
-  payload: UserState
+  payload: false
 }
 
 export type UserActionsTypes =

@@ -20,10 +20,10 @@ const setLoggedUser = (userSession: UserState): SetLoggedUserAction => {
   }
 }
 
-const setNotLoggedUser = (userSession: UserState): SetNotLoggedUserAction => {
+const setNotLoggedUser = (): SetNotLoggedUserAction => {
   return {
     type: SET_NOT_LOGGED_USER,
-    payload: userSession
+    payload: false
   }
 }
 
