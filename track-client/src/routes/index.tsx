@@ -22,11 +22,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 const Tab = createMaterialBottomTabNavigator()
 const Stack = createStackNavigator()
 
-interface Options {
-  navigation: any
-  route: any
-}
-
 const Routes: React.FC = () => {
   const userSession = useSelector((state) => state.user)
   const dispatch = useDispatch()

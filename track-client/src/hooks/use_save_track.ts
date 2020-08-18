@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'src/store'
 import { createTrack } from 'src/store/tracks'
 import { resetForm } from 'src/store/location'
 import { useNavigation } from '@react-navigation/native'
+import { ensure } from 'src/utils'
 
 const useSaveTrack = (): ((
   setLoading: Dispatch<SetStateAction<boolean>>
@@ -16,7 +17,7 @@ const useSaveTrack = (): ((
     try {
       setLoading(true)
 
-      await createTrack(location.name, location.locations, tracks)
+      await createTrack(location.name, location.locations, ensure(tracks))
 
       dispatch(resetForm(location))
 
