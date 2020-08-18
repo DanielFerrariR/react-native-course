@@ -66,7 +66,7 @@ API_ADDRESS=http://localhost:3005
 
 Important notes:
 
-- If the variables don't update on changing, open metro with yarn start --reset-cache
+- If the variables don't update on changing, open metro with 'yarn start --reset-cache'.
 - HTTP requests are blocked by android/ios by default. A possible workaround is to use the React Native Debugger with the Network Inspector turned on. You can also use HTTPS locally with the ngrok library on the server side of this app with the command 'yarn tunnel'.
 
 3. **Change YOUR_API_KEY to your Google Maps API Key in AndroidManifest.xml (Android/app/main)**
