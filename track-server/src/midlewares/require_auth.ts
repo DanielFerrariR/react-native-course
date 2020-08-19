@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken'
 import mongoose from 'mongoose'
 import { Request, Response, NextFunction } from 'express'
+import { User } from 'src/models/User'
 import { ensure } from '../utils'
 
 const User = mongoose.model('User')
@@ -30,7 +31,7 @@ const requireAuth = (
 
       const user = await User.findById(userId)
 
-      req.user = user
+      req.user = user as User
 
       return next()
     }

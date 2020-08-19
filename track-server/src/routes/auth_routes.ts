@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
   }
 
   try {
-    const isEqual = await user.comparePassword(password)
+    const isEqual = await user.schema.methods.comparePassword(password)
 
     if (!isEqual) {
       return res.status(401).send({ error: 'Invalid password or email.' })

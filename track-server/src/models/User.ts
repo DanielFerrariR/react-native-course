@@ -1,6 +1,11 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 
+export type User = {
+  email: string
+  password: string
+} & mongoose.Document
+
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -14,7 +19,7 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.pre('save', async function (next) {
-  const user = this
+  const user = this as User
 
   if (!user.isModified('password')) {
     return next()
