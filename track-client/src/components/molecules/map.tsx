@@ -48,7 +48,7 @@ const Map: React.FC = () => {
               }}
               radius={30}
               strokeColor={theme.colors.custom.userLocationStroke}
-              fillColor={theme.colors.custom.userLocationStroke}
+              fillColor={theme.colors.custom.userLocationFill}
             />
             <Polyline
               coordinates={location.locations.map((each) => each.coords)}
