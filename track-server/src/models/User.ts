@@ -4,6 +4,7 @@ import bcrypt from 'bcrypt'
 export type User = {
   email: string
   password: string
+  comparePassword: (candidate: string) => Promise<boolean>
 } & mongoose.Document
 
 const userSchema = new mongoose.Schema({

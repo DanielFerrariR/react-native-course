@@ -1,12 +1,13 @@
 import React, { useCallback } from 'react'
 import MapView, { Circle, Polyline } from 'react-native-maps'
 import { Typography, Box, Paper, ActivityIndicator } from 'src/components/atoms'
-import { theme } from 'src/styles'
 import { useLocation } from 'src/hooks'
 import { useSelector, useDispatch } from 'src/store'
 import { setCurrentLocation, setLocations } from 'src/store/location'
+import { useTheme } from 'react-native-paper'
 
 const Map: React.FC = () => {
+  const theme = useTheme()
   const location = useSelector((state) => state.location)
   const dispatch = useDispatch()
   const callback = useCallback(

@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import jwt from 'jsonwebtoken'
+import { User } from 'src/models/User'
 import { ensure } from '../utils'
 
 const User = mongoose.model('User')
@@ -31,14 +32,14 @@ router.post('/login', async (req, res) => {
     return res.status(422).send({ error: 'Must provide email and password' })
   }
 
-  const user = await User.findOne({ email })
+  const user = await User.findOne({ email }) as User
 
   if (!user) {
     return res.status(401).send({ error: 'Invalid password or email.' })
   }
 
   try {
-    const isEqual = await user.schema.methods.comparePassword(password)
+    const isEqual = await user.comparePassword(password)
 
     if (!isEqual) {
       return res.status(401).send({ error: 'Invalid password or email.' })

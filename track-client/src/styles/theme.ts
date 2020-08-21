@@ -5,8 +5,7 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace ReactNativePaper {
     interface ThemeColors {
-      userLocationStroke: string
-      userLocationFill: string
+      custom: { userLocationStroke: string; userLocationFill: string }
     }
   }
 }
