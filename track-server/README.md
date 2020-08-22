@@ -60,6 +60,12 @@ MONGO_URI=mongodb+srv://admin:password@cluster0.wxorm.mongodb.net/<dbname>?retry
 yarn
 ```
 
+4. **Start nodemon**
+
+```sh
+yarn dev
+```
+
 5. **Commands**
 
 ```bash
