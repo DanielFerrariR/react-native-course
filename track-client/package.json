@@ -8,6 +8,7 @@
     "prettier": "prettier \"**/*.+(js|jsx|json|ts|tsx|md|mdx|html|eslintrc|prettierrc)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
     "validate": "npm-run-all --parallel check-types check-format lint",
     "start": "react-native start",
     "ios:dev": "react-native run-ios",

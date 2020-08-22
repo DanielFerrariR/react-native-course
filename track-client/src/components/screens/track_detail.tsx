@@ -29,7 +29,9 @@ const TrackDetail: React.FC<Props> = ({ route }) => {
         <Appbar.Content title="Track Detail" />
       </Appbar.Header>
       <Container m={2}>
-        <Typography variant="h1" mb={3}>Track name: {track.name}</Typography>
+        <Typography variant="h1" mb={3}>
+          Track name: {track.name}
+        </Typography>
         <MapView
           style={{ height: 300 }}
           initialRegion={{
